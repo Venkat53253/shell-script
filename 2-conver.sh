@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo "Hello, World!"
+Number=1
+Number2=2
+
+echo "Number is $Number"
