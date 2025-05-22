@@ -6,7 +6,7 @@ if [ $userid -ne 0 ]; then
     exit 1
 fi
 
-dnf -y install mysql-server
+dnf -y install mysql-serverr
 if [ $? -ne 0 ]; then
     echo "Failed to install MySQL server"
     exit 10
