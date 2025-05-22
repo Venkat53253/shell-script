@@ -6,13 +6,13 @@ if [ $userid -ne 0 ]; then
     exit 1
 fi
 
-dnf -y install mysql-serverr
+dnf -y install mysql-server
 if [ $? -ne 0 ]; then
     echo "Failed to install MySQL server"
     exit 10
     fi
 
-dnf -y install nginxx
+dnf -y install nginx
 if [ $? -ne 0 ]; then
     echo "Failed to install Nginx"
     exit 20
