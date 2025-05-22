@@ -10,6 +10,10 @@ dnf -y install mysql-serverbhbhbhbh
 
 if [ $? -ne 0 ]; then
     echo "Failed to install MySQL server"
-    exit 1
-fi
+    exit 10
+    dnf -y install nginx njnjngin
+    if [ $? -ne 0 ]; then
+        echo "Failed to install Nginx"
+        exit 20
+    fi
 
