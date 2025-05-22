@@ -17,3 +17,9 @@ if [ $? -ne 0 ]; then
     echo "Failed to install Nginx"
     exit 20
 fi
+
+dnf list installed
+if [ $? -ne 0 ]; then
+    echo "Failed to list installed packages"
+    exit 30
+fi
