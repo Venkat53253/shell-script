@@ -8,7 +8,7 @@ DOMAIN_NAME="venaws.site"
 
 for i in "${INSTANCE[@]}"; do
     echo "Creating instance for $i"
-    (aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.micro --security-group-ids sg-066d322d0b8ea9c8f --tag-specifications "ResourceType=instance,Tags=[{Key=Name, Value=test}]" --query "Instances[0].InstanceId" --output text)
+    (aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.micro --security-group-ids sg-066d322d0b8ea9c8f --tag-specifications "ResourceType=instance,Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --output text)
 
     if [ "$i" != "frontend" ]; then
         IP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=$i" --query "Reservations[0].Instances[0].PrivateIpAddress" --output text)
@@ -17,5 +17,4 @@ for i in "${INSTANCE[@]}"; do
     fi
     echo "IP address for $i is $IP"
 
-    done
-
+done
