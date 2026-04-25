@@ -1,0 +1,10 @@
+students:
+  - name: John Doe
+    age: 20
+    major: Computer Science
+  - name: Jane Smith
+    age: 22
+    major: Mathematics
+  - name: Alice Johnson
+    age: 21
+    major: Physics      
