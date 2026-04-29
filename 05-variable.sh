@@ -2,6 +2,5 @@
 
 echo "enter the pin::"
 
-read pin
+read -s pin
 
-echo "your pin : $pin"
