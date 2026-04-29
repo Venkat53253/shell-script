@@ -1,9 +1,9 @@
 #!/bin/bash
 
-Number=10
-Number=20
+Number1=10
+Number2=20
 
-sum=$Number+$Number
+sum=$Number1+$Number2
 
 time=$(uptime)
 
