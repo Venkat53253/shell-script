@@ -7,4 +7,4 @@ sum=$Number1+$Number2
 
 time=$(uptime)
 
-echo "script is adding :$uptime"
+echo "script is adding :$time"
