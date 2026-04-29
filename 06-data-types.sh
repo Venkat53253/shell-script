@@ -9,4 +9,5 @@ time=$(uptime)
 
 echo "add the number :$sum"
 
+time=$(uptime)
 echo "script is adding :$time"
